@@ -1,4 +1,5 @@
 name: test-markdown
+
 on: [push]
 
 jobs:
@@ -6,9 +7,10 @@ jobs:
     name: autopy-lot-md
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v3
+
       - name: autopy-lot 
-        uses: deep5050/autopy-lot@master
+        uses: VladimirFokow/autopy-lot@master
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN}}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           output_type: markdown
